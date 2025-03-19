@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../static/jquery-3.7.1.min.js"></script>
     <script src="../static/script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Palomi Nihalani</h1>
         <nav class="navlinks">
@@ -58,7 +59,7 @@
 
     </div>
     <footer>
-        <p>&copy; 2025 designed and coded by Palomi Nihalani </p>
+        <p id="copyYear">designed and coded by Palomi Nihalani &copy;</p>
     </footer>
     </header>
 
