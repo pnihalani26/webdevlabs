@@ -25,16 +25,30 @@
         </nav>
     </header>
     <div class = "main">
-        <h2>Things I love to do for fun</h2>
-        <button id="showButton" onclick="showList()">Click to see...</button>
-        <ul id="myList">
-            <li>Paint</li>
-            <li>Bake</li>
-            <li>Listening to music</li>
-            <li>Playing tennis</li>
-            <li>Watching the sunset</li>
-        </ul>
-        
+        <div class="item1">
+            <h2>Things I love to do for fun</h2>
+            <!-- <button id="showButton" onclick="showList()">Click to see...</button> -->
+            <ul id="myList">
+                <li>Paint</li>
+                <li>Bake</li>
+                <li>Listening to music</li>
+                <li>Playing tennis</li>
+                <li>Watching the sunset</li>
+            </ul>
+        </div>
+        <div class ="item2">
+            <img src="../static/fun.jpg" alt="Fun Image" class="funIMG">
+        </div>
+        <div class="item3">
+            <iframe src="https://www.youtube.com/embed/9r5KQoOMQJQ" frameborder="0" title="James Charles Falling in Sister Squad Christmas Vlog" class="funVideo" allowfullscreen></iframe>
+        </div>
+        <div class="item4">
+            <div class="container">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button id="adviceButton" onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
     </div>
     <footer>
         <p id="copyYear">designed and coded by Palomi Nihalani &copy;</p>
