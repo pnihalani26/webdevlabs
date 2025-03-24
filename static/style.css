@@ -164,5 +164,16 @@ input[type="submit"] {
     margin: auto; 
 }
 
+.flexContainer {
+    display: flex;
+    align-items: center;  
+    gap: 20px;  
+}
+.flexAdvice {
+    display: flex;
+    align-items: center; 
+    gap: 20px;  
+    justify-content: center; 
+}
 
 
