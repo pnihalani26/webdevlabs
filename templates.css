@@ -1,0 +1,149 @@
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "navigation"
+        "main"
+        "bottom"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: #d1b3e0;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+
+.navlinks {
+    grid-area: navigation;
+    background-color: #f4b6c2;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "mainimg maincontent"
+        "bottomcontent bottomcontent";
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 15px;
+    background-color: #e0e0e0;
+}
+
+.mainimg {
+    grid-area: mainimg;
+    background-color: #e59866;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.maincontent {
+    grid-area: maincontent;
+    background-color: #f9e79f;
+    padding: 20px;
+}
+
+.bottomcontent {
+    grid-area: bottomcontent;
+    background-color: #a9dfbf;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: #85c1e9;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainimg {
+        order: 1;
+        padding: 10px;
+    }
+
+    .maincontent {
+        order: 2;
+        padding: 15px;
+    }
+
+    .bottomcontent {
+        order: 3;
+        padding: 15px;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+}
+.navlinks a {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navlinks a {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .navlinks.active a {
+        display: block;
+    }
+}
+
+.navlinks.show {
+    display: flex; 
+}
+
+
+.navlinks a:hover {
+    color: #4f0872; 
+    text-decoration: underline;
+}
+
+.nav-inks a.active {
+    color: #370057; 
+    font-weight: bold;
+    text-decoration: underline;
+}

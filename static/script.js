@@ -41,7 +41,7 @@ $(document).ready(function() {
         else {
             $("#fullBio").show();
                 $("#readMoreButton").text("Read Less");
-            }
+        }
     });
 });
 // var L1 = ["Watermelon", "Pinapple", "Pear", "Banana"];
@@ -158,3 +158,32 @@ function getAdvice() {
         console.error("Error:", error);
     });
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".navlinks");
+
+    hamburger.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+    });
+});
+
+$(document).ready(function() {
+    // Function to highlight the active link
+    function highlightActiveLink() {
+        const currentPath = window.location.pathname; // Get the current path
+        $('.navlinks a').each(function() {
+            // Compare the link's href with the current path
+            if (this.pathname === currentPath) {
+                $(this).addClass('active'); // Add the active class
+            } else {
+                $(this).removeClass('active'); // Remove active class if not matching
+            }
+        });
+    }
+
+    // Call the function to highlight the active link when the document is ready
+    highlightActiveLink();
+});

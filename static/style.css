@@ -32,9 +32,16 @@ header {
     padding: 4px;
 }
 .navlinks a:hover {
-    color: #AA336A;
+    color: #d467ff; 
     text-decoration: underline;
 }
+
+.navlinks a.active {
+    color: #d467ff; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 th {
     padding: 12px;
     background-color: #AA336A;
@@ -177,3 +184,80 @@ input[type="submit"] {
 }
 
 
+/* #hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.navlinks a {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navlinks a {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .navlinks.active a {
+        display: block;
+    }
+} */
+
+
+#item2 {
+    position: relative;
+    display: inline-block;
+}
+.hovertext {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;  
+    color: #AA336A;  
+    font-size: 25px;  
+    font-weight: bold;
+    opacity: 0;  
+    transition: opacity 0.3s ease;  
+    text-align: center;  
+}
+
+#item2:hover .hovertext {
+    opacity: 1;  
+}
+
+@keyframes funImageAnimation {
+    0% {
+        transform: scale(0.8) rotate(-10deg); 
+        opacity: 0.2; 
+    }
+    40% {
+        transform: scale(1.05) rotate(5deg); 
+        opacity: 0.5; /
+    }
+    60% {
+        transform: scale(1.1) rotate(-5deg); 
+    }
+    80% {
+        transform: scale(1.05) rotate(2deg); 
+    }
+    100% {
+        transform: scale(1) rotate(0deg); 
+        opacity: 1; 
+    }
+}
+
+.funIMG {
+    animation: funImageAnimation 3s ease-in-out;  
+}
+
+.funIMG:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 5px #AA336A;
+
+}
